@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Iniciar sesión
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,17 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Iniciar sesión</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <p align="center">
+    <img src="../../assets/agenda.png">
+  </p>
+  <ion-item>
+    <ion-input [(ngModel)]="usuario" placeholder="Usuario"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="contrasenia" placeholder="Contraseña"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="OnEntrar()">Entrar</ion-button>
 </ion-content>
