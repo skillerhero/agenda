@@ -1,11 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>contactos</ion-title>
+    <ion-buttons>
+      <ion-button [routerLink]="['']">
+        <ion-icon name = "arrow-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Contactos</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <ion-title>
-    Usuario:{{usuario}}
-  </ion-title>
+  <ion-list *ngFor="let contacto of contactos">
+    <ion-item (click)="onGetContacto(contacto)">
+      <ion-avatar slot="start">
+        <img [src]="contacto.foto">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{contacto.nombre}}</h2>
+        <p>{{contacto.telefono}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-fab-button class="bottomRight" (click)="onAgregar()"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
 </ion-content>

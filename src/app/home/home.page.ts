@@ -19,7 +19,7 @@ export class HomePage implements OnInit {
   async mensajeToast(mensaje:string) {
     const toast = await this.toastController.create({
       message: mensaje,
-      duration: 1000
+      duration: 2000
     });
     toast.present();
   }
@@ -35,7 +35,8 @@ export class HomePage implements OnInit {
     await alert.present();
     const { role } = await alert.onDidDismiss();
   }
-  OnEntrar(){
+  
+  onEntrar(){
     console.log("Entrar");
     this.sesionService.iniciarSesion(this.usuario, this.contrasenia).subscribe(
         data => {

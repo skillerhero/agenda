@@ -1,9 +1,38 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>registro</ion-title>
+    <ion-buttons>
+      <ion-button [routerLink]="['']">
+        <ion-icon name = "arrow-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar >
+      <ion-title size="large"  class="ion-text-center">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="vertical-center">
+    <div class=center>
+      <ion-item>
+        <ion-input [(ngModel)]="usuario" placeholder="Usuario"></ion-input>
+      </ion-item>
+    </div>
+    <div class=center>
+      <ion-item>
+        <ion-input [(ngModel)]="contrasenia" placeholder="Contraseña" type="password"></ion-input>
+      </ion-item>
+    </div>
+    <div class=center>
+      <ion-item>
+        <ion-input [(ngModel)]="contrasenia2" placeholder="Repetir contraseña" type="password"></ion-input>
+      </ion-item>
+    </div>
+    <ion-button expand="block" (click)="onRegistrar()">Registrarse</ion-button>
+  </div>
 
 </ion-content>

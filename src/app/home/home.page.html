@@ -1,25 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-title class="ion-text-center">
       Iniciar sesión
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Iniciar sesión</ion-title>
+    <ion-toolbar >
+      <ion-title size="large"  class="ion-text-center">Iniciar sesión</ion-title>
     </ion-toolbar>
   </ion-header>
-  <p align="center">
+  <p  class="ion-text-center">
     <img src="../../assets/agenda.png">
   </p>
-  <ion-item>
-    <ion-input [(ngModel)]="usuario" placeholder="Usuario"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="contrasenia" placeholder="Contraseña"></ion-input>
-  </ion-item>
-  <ion-button expand="block" (click)="OnEntrar()">Entrar</ion-button>
+  <div class=center>
+    <ion-item>
+      <ion-input [(ngModel)]="usuario" placeholder="Usuario"></ion-input>
+    </ion-item>
+  </div>
+  <div class=center>
+    <ion-item>
+      <ion-input [(ngModel)]="contrasenia" placeholder="Contraseña" type="password"></ion-input>
+    </ion-item>
+  </div>
+  <ion-button expand="block" (click)="onEntrar()">Entrar</ion-button>
+  <div class=center>
+  <ion-buttons>
+    <ion-button [routerLink] = "['/registro']">Regístrate</ion-button>
+  </ion-buttons>
+  </div>
 </ion-content>

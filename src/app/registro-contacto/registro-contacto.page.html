@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="onRegresar()">
+        <ion-icon name = "arrow-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Agregar contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar >
+      <ion-title size="large"  class="ion-text-center">Agregar contacto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="vertical-center">
+    <div class=center>
+      <ion-item>
+        <ion-input [(ngModel)]="nombre" placeholder="Nombre"></ion-input>
+      </ion-item>
+    </div>
+    <div class=center>
+      <ion-item>
+        <ion-input [(ngModel)]="telefono" placeholder="Teléfono" type="tel"></ion-input>
+      </ion-item>
+    </div>
+    <div class=center>
+      <ion-item>
+        <ion-input [(ngModel)]="correo" placeholder="Correo" type="email"></ion-input>
+      </ion-item>
+    </div>
+    <div class=center>
+      <ion-item>
+        <ion-input [(ngModel)]="facebook" placeholder="Facebook"></ion-input>
+      </ion-item>
+    </div>
+    <div class=center>
+      <ion-item>
+        <ion-input [(ngModel)]="twitter" placeholder="Twitter"></ion-input>
+      </ion-item>
+    </div>
+    <div class=center>
+      <ion-item>
+        <ion-input [(ngModel)]="instagram" placeholder="Instagram"></ion-input>
+      </ion-item>
+    </div>
+    <div class=center>
+      <ion-item>
+        <ion-input [(ngModel)]="foto" placeholder="Foto" type="url"></ion-input>
+      </ion-item>
+    </div>
+    <ion-button expand="block" (click)="onAgregar()">Agregar contacto</ion-button>
+  </div>
+
+</ion-content>

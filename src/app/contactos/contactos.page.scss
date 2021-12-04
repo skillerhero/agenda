@@ -1,0 +1,22 @@
+.bottomRight{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 20%;
+    margin-right: 10%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  
+  ion-content {
+    --background: none;
+    background-image: url('../../assets/contactos.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

@@ -1,0 +1,20 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  
+  ion-content {
+    --background: none;
+    background-image: url('../../assets/contactos.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .imagen{
+    //object-fit: cover;
+    width: 100%;
+    height: 250px;
+  }
